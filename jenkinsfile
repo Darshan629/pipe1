@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+              stage('build') {
+              steps {
+                              sh '''
+                              git clone https://github.com/HouariZegai/Calculator.git
+                              
+                              '''
+                              }
+                              }
+                stage('deploy') {
+                steps {
+                                sh '''
+                                
+                                '''
+                                }
+                                }
+                  stage('test') {
+                  steps {
+                                sh '''
+                                
+                                '''
+                                }
+                                }
+                  }
+               }
