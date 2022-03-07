@@ -6,22 +6,24 @@ pipeline {
                               sh '''
                               git clone https://github.com/HouariZegai/Calculator.git
                               cd /var/lib/jenkins/workspace/pipe1/Calculator
-                              mvn install deploy clean
+                              mvn clean install
                               '''
                               }
                               }
                 stage('deploy') {
                 steps {
                                 sh '''
-                                
-                                
+                                cd /var/lib/jenkins/workspace/pipe1/calculator/targets/
+                                sudo cp *.war /home/ec2-user/tomcat/webapps
+                                                             
+                            
                                 '''
                                 }
                                 }
                   stage('test') {
                   steps {
                                 sh '''
-                                
+                                echo "test is sucess"
                                 '''
                                 }
                                 }
